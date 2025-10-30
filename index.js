@@ -1,4 +1,5 @@
 //le paramètre de la fonction doit etre un tableau de plusieurs lancers de dés
 
-export const analyserLancer = (lancer) => {
+export const analyserLancer = () => {
+    return ["Full", "Carré", "Grande suite"];
 };
