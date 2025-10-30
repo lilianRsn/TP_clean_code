@@ -1,24 +1,24 @@
 import { describe, expect, it } from "vitest";
-import { analyserLancer } from "./index.js";
+import { analyserLancer, calculerScore } from "./index.js";
 
 describe("Doit retourner le nom de la figure détectée", () => {
     it("Doit retourner la figure détectée", () => {
         const lancers = [
-            [2, 5, 3, 3, 3],  // Full
+            [2, 2, 3, 3, 3],  // Full
             [6, 6, 6, 6, 2],  // Carré
-            [1, 2, 3, 4, 5],  // Grande suite
+            [6, 6, 6, 6, 6],  // YAMS
         ];
-        expect(analyserLancer(lancers)).toStrictEqual(["Brelan", "Carré"]);
+        expect(analyserLancer(lancers)).toStrictEqual(["Brelan", "Carré", "YAMS"]);
     });
 });
 
 describe("Doit calculer le score des figures détectées", () => {
     it("Doit retourner le score des figures détectées", () => {
-        const lancers = [
+        const figures = [
             "Full",  // Full
             "Carré",  // Carré
             "Grande suite",  // Grande suite
         ];
-        expect(analyserLancer(lancers)).toBe(69);
+        expect(calculerScore(figures)).toBe(105);
     });
 });
