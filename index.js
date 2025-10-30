@@ -14,6 +14,8 @@ export const analyserLancer = (lancers) => {
 
         if (nombreOccurrencesDes.includes(3) && !nombreOccurrencesDes.includes(4) && !nombreOccurrencesDes.includes(5)) {
             resultatsLancers.push("Brelan");
+        }else if (nombreOccurrencesDes.includes(4) && !nombreOccurrencesDes.includes(5)) {
+            resultatsLancers.push("Carré");
         }
     }
 

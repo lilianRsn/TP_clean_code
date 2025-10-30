@@ -8,7 +8,7 @@ describe("Doit retourner le nom de la figure détectée", () => {
             [6, 6, 6, 6, 2],  // Carré
             [1, 2, 3, 4, 5],  // Grande suite
         ];
-        expect(analyserLancer(lancers)).toStrictEqual(["Brelan"]);
+        expect(analyserLancer(lancers)).toStrictEqual(["Brelan", "Carré"]);
     });
 });
 
